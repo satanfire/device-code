@@ -8,12 +8,15 @@ package devicecode
 
 var DeviceCode map[string]string
 var RegionCode map[string]string
+var SkuView map[string]string
 
 var LukaProCode, LukaHeroCode, LukaHeroSCode string
 
 func init() {
 	DeviceCode = make(map[string]string)
 	RegionCode = make(map[string]string)
+	SkuView = make(map[string]string)
+
 	// 倒数第三位
 	DeviceCode["W"] = "luka"
 	DeviceCode["Z"] = "lukapro"
@@ -45,4 +48,14 @@ func init() {
 	LukaProCode = "Z"
 	LukaHeroCode = "H"
 	LukaHeroSCode = "S"
+
+	// sku展示
+	SkuView["unknown"] = "Unknown"
+	SkuView["luka"] = "Luka"
+	SkuView["lukababy"] = "Luka Baby"
+	SkuView["lukapro"] = "Luka Hero (S)"
+	SkuView["lukahero"] = "Luka Hero"
+	SkuView["lukaheros"] = "Luka HeroS"
+	SkuView["lukamini"] = "Luka Mini"
+	SkuView["lukago"] = "Luka Go"
 }

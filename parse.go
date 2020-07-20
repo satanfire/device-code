@@ -6,7 +6,7 @@
 
 package devicecode
 
-func GetSkuAndRegion(udid string) (string, string) {
+func GetSkuAndRegion(udid string) (string, string, string) {
 	sku, region := "luka", "CN"
 	udidLen := len(udid)
 
@@ -39,5 +39,5 @@ func GetSkuAndRegion(udid string) (string, string) {
 			sku = "unknown"
 		}
 	}
-	return sku, region
+	return sku, region, SkuView[sku]
 }
